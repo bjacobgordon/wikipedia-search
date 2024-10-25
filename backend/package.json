@@ -3,13 +3,20 @@
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon source/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Jacob Gordon",
   "license": "MIT",
   "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  },
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "@types/node": "^22.8.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
