@@ -20,6 +20,7 @@ const App: React.FC = () => {
     const unparsedResponse = await axios.get('/api/articles', { params: { keyword: searchTerm } });
     const fetchedResults = z_searchResult.array().parse(unparsedResponse.data);
     setResults(fetchedResults);
+    await axios.post('/api/history', { keyword: searchTerm });
   };
 
   return (
