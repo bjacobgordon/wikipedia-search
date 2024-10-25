@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon source/index.ts",
+    "start": "prisma migrate deploy; nodemon source/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +11,7 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
+    "@prisma/client": "^5.21.1",
     "axios": "^1.7.7",
     "express": "^4.21.1",
     "nodemon": "^3.1.7"
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.8.0",
+    "prisma": "^5.21.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   }
