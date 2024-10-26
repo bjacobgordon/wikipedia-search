@@ -68,6 +68,7 @@ app.post('/api/history', async (incomingRequest, outgoingResponse) => {
         searchTerm: keyword,
       },
     })
+    outgoingResponse.status(200).send('Entry added to history');
   } catch (exception) {
     const error = asError(exception);
     outgoingResponse.status(500).send(error.message);
