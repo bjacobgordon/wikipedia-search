@@ -8,7 +8,7 @@ import reactHooks   from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default eslint_ts.config(
-  { ignores: ['dist'] },
+  { ignores: ['distribution'] },
   {
     extends: [eslint_js.configs.recommended,
       ...eslint_ts.configs.strictTypeChecked,
