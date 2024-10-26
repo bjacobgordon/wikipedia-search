@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS search_app;
-USE search_app;
+CREATE DATABASE IF NOT EXISTS wikipedia-search;
+USE wikipedia-search;
 
 CREATE TABLE IF NOT EXISTS search_history (
   id INT AUTO_INCREMENT PRIMARY KEY,
