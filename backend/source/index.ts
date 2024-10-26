@@ -28,7 +28,6 @@ function asError(givenSubject: unknown): Error {
 const prisma = new PrismaClient();
 
 const app = express();
-app.listen(3001);
 
 const isSearchTerm = (givenSubject: unknown): givenSubject is string => {
   return isString(givenSubject) && !isTrivial(givenSubject);
@@ -74,3 +73,5 @@ app.post('/api/history', async (incomingRequest, outgoingResponse) => {
     outgoingResponse.status(500).send(error.message);
   }
 })
+
+app.listen(3001);
