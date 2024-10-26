@@ -28,6 +28,7 @@ function asError(givenSubject: unknown): Error {
 const prisma = new PrismaClient();
 
 const app = express();
+app.use(express.json());
 
 const isSearchTerm = (givenSubject: unknown): givenSubject is string => {
   return isString(givenSubject) && !isTrivial(givenSubject);
