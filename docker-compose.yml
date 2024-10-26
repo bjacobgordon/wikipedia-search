@@ -24,16 +24,15 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    environment:
-      - DATABASE_URL=mysql://root:password@db:3306/wikipedia-search
+    env_file:
+      - backend/.env
     networks:
       - app-network
 
   db:
     image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: wikipedia-search
+    env_file:
+      - backend/.env
     volumes:
       - db-data:/var/lib/mysql
     ports:
